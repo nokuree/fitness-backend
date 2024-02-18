@@ -1,5 +1,7 @@
-from django.shortcuts import render, HttpResponse
+from rest_framework import generics
+from .models import Workout
+from .serializers import WorkoutSerializer
 
-# Create your views here.
-def home(request):
-    return HttpResponse("Hello World")
+class WorkoutListCreate(generics.ListCreateAPIView):
+    queryset = Workout.objects.all()
+    serializer_class = WorkoutSerializer
