@@ -53,7 +53,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-
+LOGIN_REDIRECT_URL = 'home'
 
 CORS_ALLOW_ALL_ORIGINS = True
 
